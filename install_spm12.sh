@@ -1,5 +1,5 @@
 #! /bin/bash
-# Time-stamp: <2018-02-25 13:48:38 cp983411>
+# Time-stamp: <2019-10-03 17:38:26 christophe@pallier.org>
 
 # Download and install SPM12 standalone (no Matlab license required)
 # see https://en.wikibooks.org/wiki/SPM/Standalone
@@ -28,8 +28,10 @@ MCRINST=MCRInstaller.bin
 
 wget -N -r -l1 --no-parent -nd  -P $SPM_ROOT_DIR -A.zip -R "index.html*" http://www.fil.ion.ucl.ac.uk/spm/download/restricted/utopia/
 
-wget -N -r -l1 --no-parent -nd  -P $SPM_ROOT_DIR -A.bin http://www.fil.ion.ucl.ac.uk/spm/download/restricted/utopia/MCR/glnxa64/
-
+# 64bits
+#wget -N -r -l1 --no-parent -nd  -P $SPM_ROOT_DIR -A.bin http://www.fil.ion.ucl.ac.uk/spm/download/restricted/utopia/MCR/glnxa64/
+# 32bits
+wget -N -r -l1 --no-parent -nd  -P $SPM_ROOT_DIR -A.bin http://www.fil.ion.ucl.ac.uk/spm/download/restricted/utopia/MCR/glnx86
 
 # Install
 cd $SPM_ROOT_DIR
